@@ -6,7 +6,7 @@ For more details about this platform, please refer to the documentation at
 https://home-assistant.io/components/media_player.roon/
 """
 import logging
-from homeassistant.components.media_player import MediaPlayerDevice
+from homeassistant.components.media_player import MediaPlayerEntity
 from homeassistant.components.media_player.const import (
     ATTR_MEDIA_ENQUEUE, SUPPORT_PLAY_MEDIA, SUPPORT_SELECT_SOURCE, SUPPORT_STOP, SUPPORT_SHUFFLE_SET,
     MEDIA_TYPE_MUSIC, SUPPORT_NEXT_TRACK, SUPPORT_PAUSE,
@@ -57,7 +57,7 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
     async_dispatcher_connect(hass, 'roon_media_player', async_update_media_player)
 
 
-class RoonDevice(MediaPlayerDevice):
+class RoonDevice(MediaPlayerEntity):
     """Representation of an Roon device."""
 
     def __init__(self, server, player_data):
