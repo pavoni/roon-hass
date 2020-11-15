@@ -1,5 +1,10 @@
 ## Home Assistant component for Roon
 
+_A new version of this code is now integrated into home assistant_
+
+https://github.com/home-assistant/core/tree/dev/homeassistant/components/roon
+
+
 Custom component for Home Assistant (www.home-assistant.io) to control Roon (www.roonlabs.com) zones as mediaplayers.
 
 
